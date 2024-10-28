@@ -28,6 +28,29 @@ terraform -version
 mkdir terraform-ec2-instance
 cd terraform-ec2-instance
 
+Create a file named main.tf:
+
+bash
+Copy code
+touch main.tf
+Open main.tf in your favorite text editor and add the following configuration to define an EC2 instance:
+
+hcl
+Copy code
+provider "aws" {
+  region = "us-west-2"  # Specify your preferred region
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"  # Replace with a valid AMI ID for your region
+  instance_type = "t2.micro"  # Choose your instance type
+
+  tags = {
+    Name = "MyTerraformInstance"
+  }
+}
+Note: Make sure to replace the AMI ID with one that is valid for your chosen region. You can find AMI IDs in the AWS EC2 console under "AMIs."
+
 terraform init //Initialize Terraform
 
 terraform plan //Generate an Execution Plan
