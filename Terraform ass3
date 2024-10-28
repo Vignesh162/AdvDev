@@ -1,0 +1,39 @@
+Terraform
+
+Installation Steps
+For Windows
+Download Terraform:
+
+Go to the Terraform download page.
+Download the appropriate .zip file for Windows.
+Extract the Zip File:
+
+Extract the contents of the .zip file. You will find a single executable file named terraform.exe.
+Move the Executable:
+
+Move terraform.exe to a directory included in your system's PATH (e.g., C:\Windows\System32 or create a new folder like C:\Terraform).
+To create a new folder:
+Press Win + R, type cmd, and press Enter.
+Run the following command:
+bash
+Copy code
+mkdir C:\Terraform
+Move the file using File Explorer or the command line.
+Verify the Installation:
+
+Open a new command prompt and run:
+terraform -version
+
+
+mkdir terraform-ec2-instance
+cd terraform-ec2-instance
+
+terraform init //Initialize Terraform
+
+terraform plan //Generate an Execution Plan
+
+terraform apply //Apply the Configuration to Create the EC2 Instance
+
+aws ec2 describe-instances
+
+terraform destroy // Destroy the Instance
