@@ -1,0 +1,15 @@
+sudo apt update -y
+sudo apt install openjdk-17-jdk
+nano hello.java 
+
+public class hello {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+
+//In nano, press CTRL + O, then Enter to save, and CTRL + X to exit.
+
+javac hello.java
+
+java hello
